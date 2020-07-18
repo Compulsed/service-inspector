@@ -1,0 +1,12 @@
+{
+  "name": "service-inspector",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "airtable": "^0.8.1",
+    "commander": "^5.1.0",
+    "lodash": "^4.17.19",
+    "yaml": "^1.10.0"
+  }
+}
