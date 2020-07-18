@@ -34,6 +34,7 @@ To update AirTable with those values run:
 ### Improvements
 - [x] Output data which was pushed to AirTable (Print command)
 - [ ] Debug statements
+- [ ] Tests
 
 ### Unknowns
 - How do we know which values are actively being updated?
