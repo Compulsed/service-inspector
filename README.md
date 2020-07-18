@@ -1,11 +1,11 @@
-# Microservice Inspector
+# 🔎 Microservice Inspector 🔎
 
 ### Purpose
 To push information about Microservices to AirTable after CI deployment
 
 ### Design goals
 - Microservices should themselves describe what they are, should not be perscriptive about how they self identify
-- Should be able to be installed and ran without a package.json (through npmx), should be able to run in ruby projects just with a nodejs dependency
+- Should be able to be installed and ran without a package.json (through npx), should be able to run in ruby projects just with a nodejs dependency
 
 ### Get up and running
 
