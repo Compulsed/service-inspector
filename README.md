@@ -15,7 +15,7 @@ To push information about Microservices to AirTable after CI deployment
 
 ### Get up and running
 
-Service inspector uses a plugin based architecture and runs every JavaScript file in a directory specifically called `inspector-plugins` within the current working directory.
+Service inspector uses a plugin based architecture and runs every JavaScript file in a directory specifically called `inspector-plugins` within the current working directory
 
 Plugins must expose a `run` method and return an object which matches the following format:
 
