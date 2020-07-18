@@ -1,6 +1,6 @@
 const fs = require('fs');
 
-const value = ({ YAML }) => {
+const value = ({dependencies: { YAML }}) => {
   try {
     const serverlessFrameworkFileString = fs
       .readFileSync('./serverless.yml')

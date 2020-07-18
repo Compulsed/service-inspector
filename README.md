@@ -1,20 +1,39 @@
 # Microservice Inspector
 
-### Get up and running
-
-`node index.js print`
+### Purpose
+To push information about Microservices to AirTable after CI deployment
 
 ### Design goals
 - Microservices should themselves describe what they are, should not be perscriptive about how they self identify
-  - Knowing that most microservices have a similar layout how should this work?
-    - Plugins exist in /inspector folder, link to sample project with common plugins?
-    - Try and auto detect with some default values that come with the package?
 - Should be able to be installed and ran without a package.json (through npmx), should be able to run in ruby projects just with a nodejs dependency
 
+### Get up and running
+
+Service inspector uses a plugin based architecture and runs every JavaScript file in a directory specifically called `inspector-plugins` within the current working directory.
+
+Plugins must expose a `run` method and return an object which matches the following format:
+
+```
+const run = () => {
+  return {
+    columnName: 'Last Synced',
+    columnValue: Date.now(),
+  }
+};
+```
+
+module.exports = { run };
+
+Once set up you can run to see what the outputs will be:
+- `npx service-inspector print`
+
+To update AirTable with those values run:
+- `npx service-inspector update --airtable-api-key <API-KEY> --airtable-base-id appnEws1PUhekz5jh  --airtable-table-name Microservices --airtable-row-id recTrwiBViF1PS6vm`
+
+
 ### Improvements
-- Dry run command
-- Debug statements
-- Output data which was pushed to AirTable
+- [x] Output data which was pushed to AirTable (Print command)
+- [ ] Debug statements
 
 ### Unknowns
 - How do we know which values are actively being updated?

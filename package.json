@@ -13,6 +13,6 @@
   "repository": "git@github.com:Compulsed/service-inspector.git",
   "author": "Dale Salter <dalejsalter@outlook.com>",
   "bin": {
-    "service-inspector": "./index.js"
+    "service-inspector": "./src/index.js"
   }
 }

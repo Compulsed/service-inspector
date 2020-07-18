@@ -2,10 +2,10 @@ const value = () => {
   return Date.now();
 };
 
-const run = (deps) => {
+const run = () => {
   return {
     columnName: 'Last Synced',
-    columnValue: value(deps),
+    columnValue: value(),
   }
 };
 
