@@ -1,5 +1,9 @@
 # Microservice Inspector
 
+### Get up and running
+
+`node index.js print`
+
 ### Design goals
 - Microservices should themselves describe what they are, should not be perscriptive about how they self identify
   - Knowing that most microservices have a similar layout how should this work?
