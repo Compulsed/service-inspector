@@ -19,22 +19,26 @@ Service inspector uses a plugin based architecture and runs every JavaScript fil
 
 Plugins must expose a `run` method and return an object which matches the following format:
 
-```
+```js
 const run = () => {
   return {
     columnName: 'Last Synced',
     columnValue: Date.now(),
   }
 };
-```
 
 module.exports = { run };
+```
 
 Once set up you can run to see what the outputs will be:
-- `npx service-inspector print`
+```sh
+npx service-inspector print
+```
 
 To update AirTable with those values run:
-- `npx service-inspector update --airtable-api-key <API-KEY> --airtable-base-id appnEws1PUhekz5jh  --airtable-table-name Microservices --airtable-row-id recTrwiBViF1PS6vm`
+```sh
+npx service-inspector update --airtable-api-key <API-KEY> --airtable-base-id appnEws1PUhekz5jh  --airtable-table-name Microservices --airtable-row-id recTrwiBViF1PS6vm
+```
 
 
 ### Improvements
