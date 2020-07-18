@@ -1,6 +1,6 @@
 {
   "name": "service-inspector",
-  "version": "1.0.0",
+  "version": "0.0.2",
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
@@ -8,5 +8,11 @@
     "commander": "^5.1.0",
     "lodash": "^4.17.19",
     "yaml": "^1.10.0"
+  },
+  "description": "Sends microservice information to AirTable",
+  "repository": "git@github.com:Compulsed/service-inspector.git",
+  "author": "Dale Salter <dalejsalter@outlook.com>",
+  "bin": {
+    "service-inspector": "./index.js"
   }
 }
